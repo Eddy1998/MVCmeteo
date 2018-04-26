@@ -9,7 +9,7 @@
     
   </div>
   <div class="row">
-  <div class="col-sm-4">
+  <div id="ciao" class="col-sm-4">
  
   </div>
     <div class="col-sm-4" class="panel panel-default" position="center" >
@@ -24,7 +24,7 @@
 
   
   
-    <div class="col-sm-4">
+    <div  class="col-sm-4">
       
   </div>
   </div>
