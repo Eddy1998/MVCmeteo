@@ -1,27 +1,29 @@
 <html>
 <head>
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+ <script src="http://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="  crossorigin="anonymous"></script>
+  <script src="controller.js"></script>
 </head>
 <body>
     
   </div>
   <div class="row">
   <div class="col-sm-4">
+ 
+  </div>
     <div class="col-sm-4" class="panel panel-default" position="center" >
      <div class="form-group">
         <legend class="control-label">Inserisci localita'</legend>
         <div>
-          <input id="loc" type="text" class="form-control" placeholder="Loc"  required>
+          <input id="localita" type="text" class="form-control" placeholder="place" >
         </div>
     </div>
-      <button type="submit" class="btn btn-info" id="search1" ><b>Search</b></button>  
+      <button id="search"  type="submit" class="btn btn-info"  ><b>Search</b></button>  
     </div>
-  </div>
+
   
-  <div class="col-sm-4">
-    
-    
-  </div>
+  
     <div class="col-sm-4">
       
   </div>
