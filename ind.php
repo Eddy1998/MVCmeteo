@@ -35,10 +35,13 @@
             </div>
             <button id="search1"  type="submit" class="btn btn-danger"  ><b>Search</b></button>  
          </div>
-      <div id="second">
-        <select id="set">
+      <div>
+        <div id="primeiro">
           
-        </select>
+        </div>
+        <div id="second">
+          
+        </div>
       </div>
     </div>
   </div>

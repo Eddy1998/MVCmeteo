@@ -23,36 +23,40 @@ $( document ).ready(function() {
   }); 
   $("#search1").click(function (){
     console.log("bottone click");
-    $.getJSON("http://api.openweathermap.org/data/2.5/forecast",{ "q":$("#localita1").val(),"APPID":"3b8939ce1f3413f183f908d321debab5","units":"metric"} , function(result){
-      console.log(result);
-      var d=result.name+", "+result.country+" (lon= "+result.city.coord.lon+", lat= "+result.city.coord.lat+")";
-     //$('#select');
-      var primo="<br><table><tr><th scope='col' colspan='2'>Select a date/time <select id='myselect'></select><th></tr></table>";
-       //$(result).each(function(i, o) {
-         //   $('#select').append($('<option>').text(o.list[i].dt_txt).attr('value', i));
-       // });
-           //funct $(result).each(function(i, o) {
-            //var $option = $('<option>').text(o.list[i].dt_txt).attr('value', i);
-            //$('#select').append($option);
-             // });
-      $(result.list).each(function(i,o) {
+    $.getJSON("http://api.openweathermap.org/data/2.5/forecast",{ "q":$("#localita1").val(),"APPID":"3b8939ce1f3413f183f908d321debab5","units":"metric"} , function(risposta){
+      console.log(risposta);
+      
+      
+      var d = risposta.city.name+", "+risposta.city.country+" (lon= "+risposta.city.coord.lon+", lat= "+risposta.city.coord.lat+")<br>Select a date/time  <select id='set'>  </select>";
+      $('#primeiro').append(d);
+     
+      $(risposta.list).each(function(i,o) {
         console.log(o.dt_txt);
         $('#set').append($('<option>', { 
         value: i,
-        text : o.dt_txt,
-    }));
-
-      });
-//         var secondo="<tr><th>Main</th><td>"+result.weather[0].main+"</td></tr>";
-//         var ter="<tr><th>Description</th><td>"+result.weather[0].description+"</td></tr>";
-//         var quar="<tr><th>Temp</th><td>"+result.main.temp+" &#x2103;</td></tr>";
-//         var quin="<tr><th>Pressure</th><td>"+result.main.pressure+" hPa</td></tr>";
-//         var sest="<tr><th>Humidity</th><td>"+result.main.humidity+"%</td></tr>";
-//         var sett="<tr><th>Wind speed</th><td>"+result.wind.speed+" m/s</td></tr>";
-//         var ott="<tr><th>Wind deg</th><td>"+result.wind.deg+"</td></tr>";
-//         var nov="<tr><th>Visibility</th><td>"+result.visibility+"</td></tr></table>";
-//         var string=primo+secondo+ter+quar+quin+sest+sett+ott+nov;
+        text : o.dt_txt,}));
+        });
+      changed($('#set').val(),risposta);
+       
+     
         
     });
-  }); 
+  });
+  $( "#set" ).change(function() {
+    $('#second').empty();
+  changed($('#set').val());
+});
+  $(function changed(a,result){
+
+    var secondo="<br><table><tr><th>Main</th><td>"+result.list[a].weather.main+"</td></tr>";
+        var ter="<tr><th>Description</th><td>"+result.list[a].weather.description+"</td></tr>";
+        var quar="<tr><th>Temp</th><td>"+result.list[a].main.temp+" &#x2103;</td></tr>";
+         var quin="<tr><th>Pressure</th><td>"+result.list[a].main.pressure+" hPa</td></tr>";
+         var sest="<tr><th>Humidity</th><td>"+result.list[a].main.humidity+"%</td></tr>";
+        var sett="<tr><th>Wind speed</th><td>"+result.list[a].wind.speed+" m/s</td></tr>";
+         var ott="<tr><th>Wind deg</th><td>"+result.list[a].wind.deg+"</td></tr></table>";
+      var string=secondo+ter+quar+quin+sest+sett+ott;
+      $('#second').append(string);
+
+}); 
 });
