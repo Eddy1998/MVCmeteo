@@ -7,7 +7,10 @@
   <script src="controller.js"></script>
 </head>
 <body>
-    
+    <div>
+      <p>
+       <img src="today.png"></p>  
+    </div>
   <div class="row">
  <div class="col-sm-6">
     <div class="col-sm-6" class="panel panel-default" position="center" >
