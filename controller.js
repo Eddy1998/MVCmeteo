@@ -36,27 +36,40 @@ $( document ).ready(function() {
         value: i,
         text : o.dt_txt,}));
         });
-      changed($('#set').val(),risposta);
+      var a = $('#set').val();
+      var secondo="<br><table><tr><th>Main</th><td>"+risposta.list[a].weather.main+"</td></tr>";
+        var ter="<tr><th>Description</th><td>"+risposta.list[a].weather.description+"</td></tr>";
+        var quar="<tr><th>Temp</th><td>"+risposta.list[a].main.temp+" &#x2103;</td></tr>";
+         var quin="<tr><th>Pressure</th><td>"+risposta.list[a].main.pressure+" hPa</td></tr>";
+         var sest="<tr><th>Humidity</th><td>"+risposta.list[a].main.humidity+"%</td></tr>";
+        var sett="<tr><th>Wind speed</th><td>"+risposta.list[a].wind.speed+" m/s</td></tr>";
+         var ott="<tr><th>Wind deg</th><td>"+risposta.list[a].wind.deg+"</td></tr></table>";
+      var string=secondo+ter+quar+quin+sest+sett+ott;
+      $('#second').append(string);
+      $('#set').change(function(){
+        var a = $('#set').val();
+         $('#second').empty();
+        var secondo="<br><table><tr><th>Main</th><td>"+risposta.list[a].weather.main+"</td></tr>";
+        var ter="<tr><th>Description</th><td>"+risposta.list[a].weather.description+"</td></tr>";
+        var quar="<tr><th>Temp</th><td>"+risposta.list[a].main.temp+" &#x2103;</td></tr>";
+         var quin="<tr><th>Pressure</th><td>"+risposta.list[a].main.pressure+" hPa</td></tr>";
+         var sest="<tr><th>Humidity</th><td>"+risposta.list[a].main.humidity+"%</td></tr>";
+        var sett="<tr><th>Wind speed</th><td>"+risposta.list[a].wind.speed+" m/s</td></tr>";
+         var ott="<tr><th>Wind deg</th><td>"+risposta.list[a].wind.deg+"</td></tr></table>";
+      var string=secondo+ter+quar+quin+sest+sett+ott;
+      $('#second').append(string);
+
+      });
        
      
         
     });
   });
   $( "#set" ).change(function() {
-    $('#second').empty();
+   
   changed($('#set').val());
 });
   $(function changed(a,result){
-
-    var secondo="<br><table><tr><th>Main</th><td>"+result.list[a].weather.main+"</td></tr>";
-        var ter="<tr><th>Description</th><td>"+result.list[a].weather.description+"</td></tr>";
-        var quar="<tr><th>Temp</th><td>"+result.list[a].main.temp+" &#x2103;</td></tr>";
-         var quin="<tr><th>Pressure</th><td>"+result.list[a].main.pressure+" hPa</td></tr>";
-         var sest="<tr><th>Humidity</th><td>"+result.list[a].main.humidity+"%</td></tr>";
-        var sett="<tr><th>Wind speed</th><td>"+result.list[a].wind.speed+" m/s</td></tr>";
-         var ott="<tr><th>Wind deg</th><td>"+result.list[a].wind.deg+"</td></tr></table>";
-      var string=secondo+ter+quar+quin+sest+sett+ott;
-      $('#second').append(string);
 
 }); 
 });
