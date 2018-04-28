@@ -2,6 +2,10 @@
 <!DOCTYPE html>
  <html class="no-js"> <!--<![endif]-->
 	<head>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+ <script src="http://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="  crossorigin="anonymous"></script>
+  <script src="controller.js"></script>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<title>todayCloud</title>
@@ -62,21 +66,25 @@
 				
 				<div class="desc animate-box fadeInUp animated" style="margin-top: 0px;top: 140px;">
 				
-					<h2 class="fh5co-sub-ddown">Current <strong>weather<br></strong> and <strong>forecasts</strong> <br>in your city </h2>
+          <h2 class="fh5co-sub-ddown">Current <strong>Weather</strong> <br>in your city </h2>
             <div class="row">
               <div class="col-sm-4">
                 
               </div>
               <div class="col-sm-4">
                 
-            <span><input type="text" class="form-control" placeholder="Insert your city" ></span>
-             <span><a class="btn btn-primary btn-lg" href="#" >Search</a></span>
+            <span><input id="localita" type="text" class="form-control" placeholder="Insert your city" ></span>
+             <span><a id="search" class="btn btn-primary btn-lg" href="#" >Search</a></span>
                 
 				
             </div>
               <div class="col-sm-4">
                 
               </div>
+          </div>
+          <div id="first" class="row">
+
+      </div>
           </div>
 			</div>
 			</div>
