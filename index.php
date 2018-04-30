@@ -68,7 +68,6 @@
 				<div class="desc animate-box fadeInUp animated" style="margin-top: 0px;top: 140px;">
 				
           <h2 class="fh5co-sub-ddown">Current <strong>Weather</strong> <br>in your city </h2>
-          <i class="owf owf-800"></i>
             <div class="row">
                 <div class="col-sm-4">
                 

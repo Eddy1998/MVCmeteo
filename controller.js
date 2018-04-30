@@ -8,6 +8,7 @@ $( document ).ready(function() {
     d.toUTCString();
     $.getJSON("https://api.openweathermap.org/data/2.5/weather",{ "q":$("#localita").val(),"APPID":"3b8939ce1f3413f183f908d321debab5","units":"metric"} , function(result){
       console.log(result);
+      console.log("non funziona niente");
       var cit="<h2 class='fh5co-sub-ddown'>"+result.name+", "+result.sys.country+"</h2>";
       console.log(cit);
       console.log("waa");
