@@ -68,23 +68,22 @@
 				
           <h2 class="fh5co-sub-ddown">Current <strong>Weather</strong> <br>in your city </h2>
             <div class="row">
-              <div class="col-sm-4">
+                <div class="col-sm-4">
                 
-              </div>
-              <div class="col-sm-4">
-                
-            <span><input id="localita" type="text" class="form-control" placeholder="Insert your city" ></span>
-             <span><a id="search" class="btn btn-primary btn-lg" href="#" >Search</a></span>
-                
-				
-            </div>
-              <div class="col-sm-4">
-                
-              </div>
-          </div>
-          <div id="first" class="row">
+                </div>
+                <div class="col-sm-4">
 
-      </div>
+                    <span><input id="localita" type="text" class="form-control" placeholder="Insert your city" ></span>
+                    <span><a id="search" class="btn btn-primary btn-lg" href="#" >Search</a></span>
+                  <div id="first" class="row">
+
+                  </div>
+                </div>
+                <div class="col-sm-4">
+                
+                </div>
+          </div>
+          
           </div>
 			</div>
 			</div>
