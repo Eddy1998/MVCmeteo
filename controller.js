@@ -8,10 +8,7 @@ $( document ).ready(function() {
     d.toUTCString();
     $.getJSON("https://api.openweathermap.org/data/2.5/weather",{ "q":$("#localita").val(),"APPID":"3b8939ce1f3413f183f908d321debab5","units":"metric"} , function(result){
       console.log(result);
-      console.log("non funziona niente");
       var cit="<h2 class='fh5co-sub-ddown'>"+result.name+", "+result.sys.country+"</h2>";
-      console.log(cit);
-      console.log("waa");
        var k= "<br><img src='http://openweathermap.org/img/w/"+result.weather[0].icon+".png' style='width: 200px;  height: 200px;'><br>";
       var primo="<br><table><tr><th scope='col' colspan='2'>"+result.name+", "+result.sys.country+" (lon= "+result.coord.lon+", lat= "+result.coord.lat+") </th></tr>";
     var secondo="<tr><th>Main</th><td>"+result.weather[0].main+"</td></tr>";
@@ -29,15 +26,17 @@ $( document ).ready(function() {
   }); 
   $("#search1").click(function (){
     console.log("bottone click");
-    $.getJSON("https://api.openweathermap.org/data/2.5/forecast",{ "q":$("#localita1").val(),"APPID":"3b8939ce1f3413f183f908d321debab5","units":"metric"} , function(risposta){
+      $.getJSON("https://api.openweathermap.org/data/2.5/forecast",{ "q":$("#localita1").val(),"APPID":"3b8939ce1f3413f183f908d321debab5","units":"metric"} , function(risposta){
       console.log(risposta);
       
       $('#primeiro').empty();
-      var d = risposta.city.name+", "+risposta.city.country+" (lon= "+risposta.city.coord.lon+", lat= "+risposta.city.coord.lat+")<br>Select a date/time  <select id='set'>  </select>";
+         var d="<h2 class='fh5co-sub-ddown'>"+result.name+", "+result.sys.country+"</h2>";
+      //var d = risposta.city.name+", "+risposta.city.country+" (lon= "+risposta.city.coord.lon+", lat= "+risposta.city.coord.lat+")<br>Select a date/time  <select id='set'>  </select>";
       $('#primeiro').append(d);
+        console.log("ciao");
      
       $(risposta.list).each(function(i,o) {
-        console.log(o.dt_txt);
+        
         $('#set').append($('<option>', { 
         value: i,
         text : o.dt_txt,}));

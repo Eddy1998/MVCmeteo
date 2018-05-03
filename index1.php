@@ -75,21 +75,18 @@
                 
             <span><input id="localita1" type="text" class="form-control" placeholder="Insert your city" ></span>
              <span><a id="search1" class="btn btn-primary btn-lg" href="#" >Search</a></span>
-                
-				
-            </div>
+                <div id="primeiro">
+          
+                  </div>
+                <div id="second" class="row">
+          
+                </div>
+              </div>
               <div class="col-sm-4">
                 
               </div>
           </div>
-          <div class="row">
-             <div id="primeiro">
-          
-        </div>
-        <div id="second">
-          
-        </div>
-          </div>
+         
 			</div>
 			</div>
 
