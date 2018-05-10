@@ -1,5 +1,5 @@
 $(document).ready(function() {
-  console.log("new");
+ 
 
   $("#search").click(function() {
     console.log("bottone click");
@@ -11,7 +11,7 @@ $(document).ready(function() {
       "APPID": "3b8939ce1f3413f183f908d321debab5",
       "units": "metric"
     }, function(result) {
-      console.log(result);
+      
       var cit = "<h2 class='fh5co-sub-ddown'>" + result.name + ", " + result.sys.country + "</h2>";
       var k = "<br><img src='http://openweathermap.org/img/w/" + result.weather[0].icon + ".png' style='width: 200px;  height: 200px;'><br>";
       var primo = "<br><table><tr><th scope='col' colspan='2'>" + result.name + ", " + result.sys.country + " (lon= " + result.coord.lon + ", lat= " + result.coord.lat + ") </th></tr>";
@@ -37,10 +37,10 @@ $(document).ready(function() {
       console.log(risposta);
 
       $('#primeiro').empty();
-      var d = "<h2 class='fh5co-sub-ddown'>" + result.name + ", " + result.sys.country + "</h2>";
+      var d = "<h2 class='fh5co-sub-ddown'>" + risposta.name + ", " + risposta.sys.country + "</h2>";
       //var d = risposta.city.name+", "+risposta.city.country+" (lon= "+risposta.city.coord.lon+", lat= "+risposta.city.coord.lat+")<br>Select a date/time  <select id='set'>  </select>";
       $('#primeiro').append(d);
-      console.log("ciao");
+   
 
       $(risposta.list).each(function(i, o) {
 
@@ -60,6 +60,7 @@ $(document).ready(function() {
       var sett = "<tr><th>Wind speed</th><td>" + risposta.list[a].wind.speed + " m/s</td></tr>";
       var ott = "<tr><th>Wind deg</th><td>" + risposta.list[a].wind.deg + "</td></tr></table>";
       var string = primo + secondo + ter + quar + quin + sest + sett + ott;
+      console.log(string);
       $('#second').append(string);
       $('#set').change(function() {
         var a = $('#set').val();
