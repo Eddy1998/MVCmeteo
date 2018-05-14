@@ -89,9 +89,5 @@ $(document).ready(function() {
   $(function changed(a, result) {
 
   });
-  
-  
-    $('.sidenav').sidenav();
- 
         
 });
